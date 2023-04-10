@@ -14,7 +14,7 @@ int main() {
    c=getchar();
 
     int i, j;
-
+    
     for (i = 0, j = 0; str[i] != '\0'; i++) {
         if (str[i] != c) {
             str[j++] = str[i];
