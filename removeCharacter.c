@@ -11,10 +11,10 @@ int main() {
       len++;
    }
    printf("Enter the character you want to remove from string: ");
-   c=getchar();
+   c=getchar(); 
 
     int i, j;
-    
+
     for (i = 0, j = 0; str[i] != '\0'; i++) {
         if (str[i] != c) {
             str[j++] = str[i];
