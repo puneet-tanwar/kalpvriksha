@@ -4,14 +4,14 @@
 struct node{
     int data;
     struct node* left, *right;
-    int visited;
+    
 };
 
 struct node* createNode(int data){
     struct node* temp= malloc(sizeof(struct node));
     temp->data=data;
     temp->left=temp->right=NULL;
-    temp->visited=0;
+    
 }
 void insertNode(struct node *root, int data){
     if(!root){
