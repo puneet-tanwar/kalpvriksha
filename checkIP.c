@@ -2,35 +2,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int is_valid_ip_address(char *ip_address) {
-    int num = 0, dots = 0;
-    char *ptr = ip_address;
-
-    if (ip_address == NULL) {
-        return 0;
-    }
-
-    while (*ptr != '\0') {
-        if (*ptr == '.') {
-            dots++;
-            if (num < 0 || num > 255 || dots > 3) {
-                return 0;
-            }
-            num = 0;
-        } else if (isdigit(*ptr)) {
-            num = num * 10 + (*ptr - '0');
-        } else {
-            return 0;
-        }
-        ptr++;
-    }
-
-    if (num < 0 || num > 255 || dots != 3) {
-        return 0;
-    }
-
-    return 1;
-}
 
 int main() {
     char str[20];
